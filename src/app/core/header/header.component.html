@@ -1,0 +1,61 @@
+<div class="header-container">
+
+  <div class="logo-container">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>JIRA FAKE</span>
+  </div>
+
+  <div class="buttons-container">
+    <button mat-button >Your work</button>
+
+    <button mat-button [matMenuTriggerFor]="menuProjects" aria-label="Example icon-button with a menu">
+      Projects <mat-icon>keyboard_arrow_down</mat-icon>
+    </button>
+    <mat-menu #menuProjects="matMenu">
+      <button mat-menu-item>
+        <mat-icon>dialpad</mat-icon>
+        <span>Redial</span>
+      </button>
+      <button mat-menu-item disabled>
+        <mat-icon>voicemail</mat-icon>
+        <span>Check voice mail</span>
+      </button>
+      <button mat-menu-item>
+        <mat-icon>notifications_off</mat-icon>
+        <span>Disable alerts</span>
+      </button>
+    </mat-menu>
+
+    <button mat-button [matMenuTriggerFor]="menuPeople" aria-label="Example icon-button with a menu">
+      People <mat-icon>keyboard_arrow_down</mat-icon>
+    </button>
+    <mat-menu #menuPeople="matMenu">
+      <button mat-menu-item>
+        <mat-icon>dialpad</mat-icon>
+        <span>Redial</span>
+      </button>
+      <button mat-menu-item disabled>
+        <mat-icon>voicemail</mat-icon>
+        <span>Check voice mail</span>
+      </button>
+      <button mat-menu-item>
+        <mat-icon>notifications_off</mat-icon>
+        <span>Disable alerts</span>
+      </button>
+    </mat-menu>
+
+    <button nbButton status="primary">Create</button>
+  </div>
+  <span class="spacer"></span>
+
+  <div class="avatar-container">
+    <nb-search type="rotate-layout"></nb-search>
+    <nb-actions size="small">
+      <nb-action icon="settings-outline"></nb-action>
+    </nb-actions>
+
+    <nb-user name="John Doe" title="Engineer"></nb-user>
+  </div>
+</div>
